@@ -46,9 +46,20 @@ body {
     padding: 5px;
     line-height: 0.5;
 }
+.fw-bolder{
+    font-weight: bold;
+}
+.fs-6{
+    font-size: 0.7em;
+}
+.card i{
+    color:rgb(255, 148, 8);
+}
 .card:hover{
-    transition: 1s;
+    /* transition: 1s; */
+    cursor: pointer;
     background-color: rgb(255, 148, 8);
+    color: white;
 }
 
 select{
