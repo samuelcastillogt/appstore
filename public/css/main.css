@@ -1,0 +1,59 @@
+nav{
+    background-color: black;
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-around;
+    padding: 0.5rem 1rem;
+}
+body {
+    padding-top: 5rem;
+}
+.starter-template {
+    padding: 3rem 1.5rem;
+    text-align: center;
+}
+.modal-{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: fixed;
+    top: 20px;
+    left:0;
+    right: 0;
+    width: 300px;
+    height: 90%;
+    z-index: 1031;
+    border: 1px solid black;
+    padding: 10px;
+}
+.screenshot img{
+    width: 100%;
+}
+.modal- .modal-item{
+    width: 80px;
+}
+.buttons{
+    display: flex;
+    justify-content: end;
+}
+.card-content{
+    padding: 5px;
+    line-height: 0.5;
+}
+.card:hover{
+    transition: 1s;
+    background-color: rgb(255, 148, 8);
+}
+
+select{
+    width: 80%;
+    padding: 5px;
+    font-size: 18px;
+    margin: 10px;
+}
