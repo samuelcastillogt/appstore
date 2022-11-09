@@ -1,5 +1,5 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import StarRanking from './starRanking';
 
 const Card = (props) => {
   const handleData = ()=>{
@@ -13,8 +13,7 @@ const Card = (props) => {
           <p className="fw-bolder">{props.data.name}</p>
           <p className="fs-6">{props.data.developer}</p>
         </div>
-        <FontAwesomeIcon icon="fa-regular fa-star" />
-        <i class="fa-regular fa-star"></i>
+        <StarRanking ranking={props.data.ranking}/>
       <p className='h5'>{props.data.price <= 0.5 ? "Free" : `$.${props.data.price}`}</p>
       </div>
 </div>

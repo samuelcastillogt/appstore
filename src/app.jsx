@@ -5,6 +5,7 @@ import Card from './components/Card';
 import Modal from './components/Modal';
 import SelectCategories from './components/SelectCategories';
 import database from './database';
+import Carusel from './components/Carusel';
 const App = () => {
     const [modal, setModal] = useState(false)
     return (
@@ -13,7 +14,7 @@ const App = () => {
             <SelectCategories />
             <ContainerCards>
                 {
-                    database.map(item => <Card data={item} setModal={setModal}/>)
+                    database.map(item => <Card data={item} setModal={setModal} key={item.name}/>)
                 }
             </ContainerCards>
             {
