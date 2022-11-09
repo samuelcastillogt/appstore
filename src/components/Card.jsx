@@ -13,7 +13,7 @@ const Card = (props) => {
           <p className="fw-bolder">{props.data.name}</p>
           <p className="fs-6">{props.data.developer}</p>
         </div>
-        <StarRanking ranking={props.data.ranking}/>
+        <StarRanking ranking={props.data.ranking} card={true}/>
       <p className='h5'>{props.data.price <= 0.5 ? "Free" : `$.${props.data.price}`}</p>
       </div>
 </div>

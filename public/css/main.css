@@ -1,35 +1,49 @@
-nav{
-    background-color: black;
-    position: relative;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -ms-flex-align: center;
-    align-items: center;
-    -ms-flex-pack: justify;
-    justify-content: space-around;
-    padding: 0.5rem 1rem;
-}
 body {
     padding-top: 5rem;
+    height: 100vh;
+}
+#root{
+    height: 100%;
+}
+nav{
+    background-color: black;
+
+}
+.navbar-toggler{
+    border: 1px solid rgb(255, 148, 8);
+    color: rgb(255, 148, 8);
+}
+.navbar-collapse{
+    display: flex;
+    justify-content: end;
+}
+select{
+    width: 80%;
+    margin: 10px;
+}
+.dark{
+    background-color: rgba(0, 0, 0, 0.26);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 1301;
 }
 .starter-template {
     padding: 3rem 1.5rem;
     text-align: center;
 }
-.modal-{
+.modal-container{
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    position: fixed;
+    justify-content: center;
+}
+.modal-{
     top: 20px;
-    left:0;
-    right: 0;
-    width: 300px;
     overflow-y: auto;
+    width: 300px;
     height: 95vh;
-    z-index: 1031;
-    border: 1px solid black;
+    z-index: 1302;
     padding: 10px;
 }
 .modal- svg{
@@ -49,11 +63,12 @@ body {
     height: 100px;
 }
 .modal-details-text{
-    margin-left: 10px;;
+    margin-left: 15px;
 }
 .modal-details-text .p{
     font-size: 0.6em;
-    margin-bottom: 0;
+    line-height: 0.9em;
+    padding: 5px 0;
 }
 .screenshot img{
     width: 100%;
@@ -88,12 +103,7 @@ body {
 .card:hover svg{
     color: white;
 }
-select{
-    width: 80%;
-    padding: 5px;
-    font-size: 18px;
-    margin: 10px;
-}
+
 .center-star{
     display: flex;
     justify-content: center;
@@ -111,6 +121,10 @@ select{
 }
 .coment-content{
     margin-left: 5px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .coment-container img{
     border-radius: 50%;
@@ -119,4 +133,22 @@ select{
 }
 .bold{
     font-weight: bold;
+}
+.carusel{
+    position: relative;
+}
+.carrusel-buttons{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:50%;
+    display: flex;
+    justify-content: space-between;
+}
+.carrusel-buttons svg{
+    color: white;
+    cursor: pointer;
+}
+.orange{
+    background-color: rgb(255, 148, 8);
 }

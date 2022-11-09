@@ -1,13 +1,26 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 const StarRanking = (props) => {
-    
-    const ranking = props.ranking
+    const [ranking, setRanking] = useState(props.ranking)
+    const [estrellas, setEstrellas]= useState(props.style)
+    console.log(props.style)
+    useEffect(()=>{
+        if(props.card == false){
+            if(ranking <= 2){
+                setEstrellas({color: "red"})
+              }else{
+                setEstrellas({color: "green"})
+              }
+        }     
+    }, [ranking])
+    const indexStart= (index)=>{
+        setRanking(index+1)
+    }
     return (
-        <div className='star-container'>
+        <div className='star-container' >
             {
                 [... new Array(5)].map((star, index)=>{
-                    return index < ranking ? <FontAwesomeIcon icon="fa-solid fa-star" /> : <FontAwesomeIcon icon="fa-regular fa-star" />
+                    return index < ranking ? <FontAwesomeIcon icon="fa-solid fa-star" key={index} style={estrellas} onClick={() =>indexStart(index)}/> : <FontAwesomeIcon icon="fa-regular fa-star" key={index} style={estrellas} onClick={() =>indexStart(index)}/>
 
                 })
             }
