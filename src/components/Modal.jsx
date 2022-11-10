@@ -12,7 +12,7 @@ const Modal = (props) => {
     <React.Fragment>
       <div
         className="dark"
-        style={{ height: document.body.clientHeight }}
+        style={{ height: window.screen.height }}
       ></div>
       <div className="modal- mx-auto d-flex flex-column bg-white position-fixed top-1 start-0">
         <div className="screenshot">

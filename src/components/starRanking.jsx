@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 const StarRanking = (props) => {
     const [ranking, setRanking] = useState(props.ranking)
     const [estrellas, setEstrellas]= useState(props.style)
-    console.log(props.style)
     useEffect(()=>{
         if(props.card == false){
             if(ranking <= 2){

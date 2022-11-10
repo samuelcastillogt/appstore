@@ -1,6 +1,6 @@
 body {
     padding-top: 5rem;
-    height: 100vh;
+    /* height: 100vh; */
 }
 #root{
     height: 100%;
@@ -18,12 +18,12 @@ nav{
     justify-content: end;
 }
 select{
-    width: 80%;
+    width: 90%;
     margin: 10px;
 }
 .dark{
     background-color: rgba(0, 0, 0, 0.26);
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
@@ -95,7 +95,6 @@ select{
     color:rgb(255, 148, 8);
 }
 .card:hover{
-    /* transition: 1s; */
     cursor: pointer;
     background-color: rgb(255, 148, 8);
     color: white;
@@ -127,12 +126,17 @@ select{
     justify-content: center;
 }
 .coment-container img{
-    border-radius: 50%;
     width: 25px;
     height: 25px;
 }
 .bold{
     font-weight: bold;
+}
+.container-app{
+    display: grid;
+    grid-template-columns: repeat(6, 150px);
+    gap: 20px;
+    width: 100%;
 }
 .carusel{
     position: relative;
@@ -151,4 +155,14 @@ select{
 }
 .orange{
     background-color: rgb(255, 148, 8);
+}
+@media screen and (max-width: 760px) {
+    .container-app{
+        grid-template-columns: repeat(4, 140px);
+    }
+}
+@media screen and (max-width: 480px) {
+    .container-app{
+        grid-template-columns: repeat(2, 140px);
+    }
 }
